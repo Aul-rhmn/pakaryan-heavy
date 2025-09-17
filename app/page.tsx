@@ -22,7 +22,7 @@ export default function HomePage() {
             <Link href="/equipment" className="text-slate-600 hover:text-orange-600 font-medium transition-colors">
               Equipment
             </Link>
-            <Link href="/about" className="text-slate-600 hover:text-orange-600 font-medium transition-colors">
+            <Link href="#about" className="text-slate-600 hover:text-orange-600 font-medium transition-colors">
               About
             </Link>
             <Link href="/contact" className="text-slate-600 hover:text-orange-600 font-medium transition-colors">
@@ -178,7 +178,7 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-slate-50">
+      <section id="about" className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Why Choose PakaryanHeavyRent?</h2>
