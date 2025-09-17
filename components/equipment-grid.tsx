@@ -54,7 +54,7 @@ export function EquipmentGrid({ equipment }: EquipmentGridProps) {
         >
           <div className="aspect-[4/3] overflow-hidden relative">
             <img
-              src={item.images?.[0] || "/placeholder.svg?height=300&width=400"}
+              src={item.images?.[1] || "/placeholder.svg?height=300&width=400"}
               alt={item.name}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -96,7 +96,7 @@ export function EquipmentGrid({ equipment }: EquipmentGridProps) {
                   ))}
                   {item.features.length > 2 && (
                     <Badge variant="outline" className="text-xs">
-                      +{item.features.length - 2} more
+                      +{item.features.length - 1} more
                     </Badge>
                   )}
                 </div>

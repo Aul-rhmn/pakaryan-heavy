@@ -32,7 +32,7 @@ export default function SignUpPage() {
     setIsLoading(true)
     setError(null)
 
-    console.log("[v0] Starting sign up process")
+    console.log("Starting sign up process")
 
     if (password !== confirmPassword) {
       setError("Passwords do not match")
@@ -59,7 +59,7 @@ export default function SignUpPage() {
         },
       })
 
-      console.log("[v0] Sign up response:", { data, error })
+      console.log("Sign up response:", { data, error })
 
       if (error) {
         if (error.message.includes("already registered")) {
@@ -69,11 +69,11 @@ export default function SignUpPage() {
       }
 
       if (data.user) {
-        console.log("[v0] User created successfully")
+        console.log("User created successfully")
         setSuccess(true)
       }
     } catch (error: unknown) {
-      console.log("[v0] Sign up error:", error)
+      console.log("Sign up error:", error)
       setError(error instanceof Error ? error.message : "An error occurred")
     } finally {
       setIsLoading(false)

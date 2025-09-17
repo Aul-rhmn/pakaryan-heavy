@@ -14,16 +14,13 @@ export async function createClient() {
           try {
             cookiesToSet.forEach(({ name, value, options }) => cookieStore.set(name, value, options))
           } catch (error) {
-            console.log("[v0] Cookie setting error:", error)
-            // The "setAll" method was called from a Server Component.
-            // This can be ignored if you have middleware refreshing
-            // user sessions.
+            console.log("Cookie setting error:", error)
           }
         },
       },
     })
   } catch (error) {
-    console.log("[v0] Server client creation error:", error)
+    console.log("Server client creation error:", error)
     throw error
   }
 }

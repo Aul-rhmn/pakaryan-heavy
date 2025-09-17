@@ -16,7 +16,6 @@ export default async function BookingConfirmationPage({ params }: BookingConfirm
   const { bookingId } = await params
   const supabase = await createClient()
 
-  // Check if user is authenticated
   const {
     data: { user },
     error: authError,
@@ -26,7 +25,6 @@ export default async function BookingConfirmationPage({ params }: BookingConfirm
     redirect("/auth/login")
   }
 
-  // Fetch booking details
   const { data: booking, error } = await supabase
     .from("bookings")
     .select(`

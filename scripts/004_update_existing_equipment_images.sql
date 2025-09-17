@@ -2,7 +2,7 @@
 
 -- Update Caterpillar 320D Excavator
 UPDATE equipment 
-SET images = ARRAY['/images/excavator-1.jpg', '/images/excavator-2.jpg', '/images/excavator-3.jpg']
+SET images = ARRAY['/images/excavator-1.jpg', '/images/excavator-2.jpg', '/images/excavator-3.jpg', '/images/excavator-4.jpg' ]
 WHERE name = 'Caterpillar 320D Excavator';
 
 -- Update Komatsu D65PX Bulldozer  

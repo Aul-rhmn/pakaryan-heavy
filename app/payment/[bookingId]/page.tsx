@@ -17,7 +17,6 @@ export default async function PaymentPage({ params }: PaymentPageProps) {
   const { bookingId } = await params
   const supabase = await createClient()
 
-  // Check if user is authenticated
   const {
     data: { user },
     error: authError,
@@ -27,7 +26,6 @@ export default async function PaymentPage({ params }: PaymentPageProps) {
     redirect("/auth/login")
   }
 
-  // Fetch booking details
   const { data: booking, error } = await supabase
     .from("bookings")
     .select(`
@@ -50,7 +48,6 @@ export default async function PaymentPage({ params }: PaymentPageProps) {
     notFound()
   }
 
-  // If already paid, redirect to confirmation
   if (booking.payment_status === "completed") {
     redirect(`/booking/confirmation/${bookingId}`)
   }

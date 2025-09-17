@@ -7,7 +7,7 @@ INSERT INTO equipment (name, category_id, description, daily_rate, weekly_rate, 
  'Versatile mid-size excavator with advanced hydraulic system and fuel efficiency',
  2200000, 13200000, 44000000, 'Semarang', 'Komatsu', 'PC200-8', 2021,
  ARRAY['Eco Mode', 'Auto Idle', 'Hydraulic Quick Coupler', 'LED Work Lights'],
- ARRAY['/images/excavator-2.jpg', '/images/excavator-1.jpg']),
+ ARRAY['/images/excavator-1.jpg', '/images/excavator-1.jpg']),
 
 ('Volvo EC380E Excavator',
  (SELECT id FROM equipment_categories WHERE name = 'Excavator'),

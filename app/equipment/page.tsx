@@ -22,10 +22,8 @@ export default async function EquipmentPage({
   const params = await searchParams
   const supabase = await createClient()
 
-  // Fetch equipment categories
   const { data: categories } = await supabase.from("equipment_categories").select("*").order("name")
 
-  // Build query for equipment
   let query = supabase
     .from("equipment")
     .select(`
@@ -37,7 +35,6 @@ export default async function EquipmentPage({
     `)
     .eq("availability_status", "available")
 
-  // Apply filters
   if (params.category) {
     const categoryData = await supabase.from("equipment_categories").select("id").eq("name", params.category).single()
 

@@ -49,7 +49,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-orange-100 text-orange-800 border-orange-200">
-              Trusted by 500+ Construction Companies
+              Trusted by 20+ Construction Companies
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-6 text-balance">
               Rent Heavy Equipment
@@ -119,21 +119,21 @@ export default function HomePage() {
                 name: "Excavators",
                 description: "Hydraulic excavators for digging and earthmoving",
                 image: "/images/excavator-hero.jpg",
-                count: "25+ Available",
+                count: "8+ Available",
                 startingPrice: "From Rp 2.5M/day",
               },
               {
                 name: "Bulldozers",
                 description: "Heavy-duty bulldozers for land clearing",
                 image: "/images/bulldozer-hero.jpg",
-                count: "18+ Available",
+                count: "7+ Available",
                 startingPrice: "From Rp 3M/day",
               },
               {
                 name: "Mobile Cranes",
                 description: "All-terrain cranes for lifting operations",
                 image: "/images/crane-hero.jpg",
-                count: "12+ Available",
+                count: "8+ Available",
                 startingPrice: "From Rp 4M/day",
               },
             ].map((category, index) => (
@@ -217,7 +217,7 @@ export default function HomePage() {
               {
                 icon: Star,
                 title: "Trusted Service",
-                description: "4.9/5 rating from 500+ satisfied construction companies",
+                description: "4.9/5 rating from 20+ satisfied construction companies",
               },
             ].map((feature, index) => (
               <Card key={index} className="text-center p-6 border-0 shadow-md hover:shadow-lg transition-shadow">
@@ -281,7 +281,7 @@ export default function HomePage() {
                 </p>
                 <p className="flex items-center gap-2">
                   <span className="w-4 h-4">📍</span>
-                  <span>Jakarta, Indonesia</span>
+                  <span>Yogyakarta, Indonesia</span>
                 </p>
               </div>
             </div>

@@ -13,7 +13,6 @@ import { ProfileForm } from "@/components/profile-form"
 export default async function DashboardPage() {
   const supabase = await createClient()
 
-  // Check if user is authenticated
   const {
     data: { user },
     error: authError,
@@ -23,10 +22,8 @@ export default async function DashboardPage() {
     redirect("/auth/login")
   }
 
-  // Fetch user profile
   const { data: profile } = await supabase.from("profiles").select("*").eq("id", user.id).single()
 
-  // Fetch user bookings
   const { data: bookings } = await supabase
     .from("bookings")
     .select(`
@@ -43,7 +40,6 @@ export default async function DashboardPage() {
     .eq("user_id", user.id)
     .order("created_at", { ascending: false })
 
-  // Calculate stats
   const totalBookings = bookings?.length || 0
   const activeBookings = bookings?.filter((b) => b.status === "active").length || 0
   const pendingBookings = bookings?.filter((b) => b.status === "pending").length || 0

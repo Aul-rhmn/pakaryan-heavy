@@ -32,7 +32,7 @@ export async function middleware(request: NextRequest) {
     } = await supabase.auth.getUser()
 
     if (error) {
-      console.log("[v0] Middleware auth error:", error)
+      console.log(" Middleware auth error:", error)
     }
 
     // Protect dashboard routes
@@ -44,7 +44,7 @@ export async function middleware(request: NextRequest) {
 
     return supabaseResponse
   } catch (error) {
-    console.log("[v0] Middleware error:", error)
+    console.log(" Middleware error:", error)
     return supabaseResponse
   }
 }

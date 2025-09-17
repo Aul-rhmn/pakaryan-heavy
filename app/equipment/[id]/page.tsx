@@ -16,7 +16,6 @@ export default async function EquipmentDetailsPage({ params }: EquipmentDetailsP
   const { id } = await params
   const supabase = await createClient()
 
-  // Fetch equipment details
   const { data: equipment, error } = await supabase
     .from("equipment")
     .select(`
@@ -33,7 +32,6 @@ export default async function EquipmentDetailsPage({ params }: EquipmentDetailsP
     notFound()
   }
 
-  // Fetch similar equipment
   const { data: similarEquipment } = await supabase
     .from("equipment")
     .select(`

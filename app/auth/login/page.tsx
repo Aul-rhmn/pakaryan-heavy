@@ -31,7 +31,7 @@ export default function LoginPage() {
     setIsLoading(true)
     setError(null)
 
-    console.log("[v0] Starting login process")
+    console.log("Starting login process")
 
     try {
       const { data, error } = await supabase.auth.signInWithPassword({
@@ -39,20 +39,20 @@ export default function LoginPage() {
         password,
       })
 
-      console.log("[v0] Login response:", { data, error })
+      console.log("Login response:", { data, error })
 
       if (error) throw error
 
-      console.log("[v0] Login successful, redirecting to:", redirectTo)
+      console.log("Login successful, redirecting to:", redirectTo)
       try {
         router.push(redirectTo)
         router.refresh()
       } catch (navError) {
-        console.log("[v0] Router navigation failed, using window.location:", navError)
+        console.log("Router navigation failed, using window.location:", navError)
         window.location.href = redirectTo
       }
     } catch (error: unknown) {
-      console.log("[v0] Login error:", error)
+      console.log("Login error:", error)
       if (error instanceof Error) {
         if (error.message.includes("Invalid login credentials")) {
           setError("Invalid email or password. Please check your credentials and try again.")

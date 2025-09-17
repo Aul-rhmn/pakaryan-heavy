@@ -16,7 +16,6 @@ export default async function BookingPage({ params }: BookingPageProps) {
   const { equipmentId } = await params
   const supabase = await createClient()
 
-  // Check if user is authenticated
   const {
     data: { user },
     error: authError,
@@ -26,7 +25,6 @@ export default async function BookingPage({ params }: BookingPageProps) {
     redirect("/auth/login?redirect=/booking/" + equipmentId)
   }
 
-  // Fetch equipment details
   const { data: equipment, error } = await supabase
     .from("equipment")
     .select(`
@@ -43,7 +41,7 @@ export default async function BookingPage({ params }: BookingPageProps) {
     notFound()
   }
 
-  // Check if equipment is available
+
   if (equipment.availability_status !== "available") {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">

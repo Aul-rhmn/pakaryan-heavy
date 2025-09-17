@@ -95,8 +95,8 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600 mb-2">Visit our main office</p>
-                  <p className="text-lg font-semibold text-slate-900">Jakarta, Indonesia</p>
-                  <p className="text-sm text-slate-500">Jl. Sudirman No. 123, Jakarta Pusat</p>
+                  <p className="text-lg font-semibold text-slate-900">Yogyakarta, Indonesia</p>
+                  <p className="text-sm text-slate-500">Jl. Yogya-Solo, Yogyakarta</p>
                 </CardContent>
               </Card>
 
